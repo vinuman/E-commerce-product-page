@@ -4,6 +4,7 @@ nav {
   align-items: center;
   border-bottom: 1px solid var(--light-grayish-blue);
   padding-right: 8rem;
+  padding-top: 2rem;
 }
 
 nav > .left {
@@ -83,18 +84,19 @@ nav > .right > img {
   }
   .modal-nav {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 70%;
+    left: 1;
+    top: 1;
+    width: 90%;
     height: 100%;
     background-color: #fff;
     padding: 3rem;
+    border-radius: 1rem;
   }
   .modal-nav > ul {
     list-style-type: none;
     font-size: 1.8rem;
     font-weight: bold;
-    height: 20rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
