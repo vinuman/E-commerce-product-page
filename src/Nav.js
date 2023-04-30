@@ -1,15 +1,17 @@
+import "./Nav.css";
 import logo from "./logo.svg";
 import cart from "./icon-cart.svg";
 import profilePic from "./image-avatar.png";
+import Hamburger from "./Hamburger";
 
-const Nav = () => {
+const Nav = ({ handleHamButtonClick, hamburger, Sethamburger }) => {
   return (
     <nav>
-      <div className="hamburder">
-        <div className="lines"></div>
-        <div className="lines"></div>
-        <div className="lines"></div>
-      </div>
+      <Hamburger
+        handleHamButtonClick={handleHamButtonClick}
+        hamburger={hamburger}
+        Sethamburger={Sethamburger}
+      />
       <div className="left">
         <img src={logo}></img>
         <ul>
