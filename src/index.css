@@ -32,6 +32,6 @@ body {
   border-bottom: 2px solid #ff7e1b;
 }
 
-.hide {
-  display: none;
+.show {
+  display: block;
 }

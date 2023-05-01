@@ -122,3 +122,7 @@ main > .right {
 .add-button:hover {
   background-color: #ffab6a;
 }
+
+.show {
+  display: block;
+}

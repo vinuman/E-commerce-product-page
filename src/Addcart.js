@@ -4,7 +4,13 @@ import plus from "./icon-plus.svg";
 import cart from "./icon-cart.svg";
 import { useState } from "react";
 
-const Addcart = ({ count, setCount, handleIncrement, handleDecrement }) => {
+const Addcart = ({
+  count,
+  setCount,
+  handleIncrement,
+  handleDecrement,
+  handleAddToCart,
+}) => {
   return (
     <div className="add-cart">
       <div className="counter">
@@ -17,7 +23,7 @@ const Addcart = ({ count, setCount, handleIncrement, handleDecrement }) => {
         </button>
       </div>
       <div className="btn">
-        <button className="add-button">
+        <button onClick={handleAddToCart} className="add-button">
           <img style={{ color: "#fff", paddingRight: "2rem" }} src={cart}></img>
           Add to cart
         </button>

@@ -54,7 +54,7 @@ const Nav = ({
       </div>
       <div className="right">
         <img style={{ width: "2rem", height: "2rem" }} src={cart}></img>
-        <span className="items-count">{count}</span>
+        <span className="items-count"></span>
         <img
           className="profile-pic"
           style={{ width: "5rem", height: "5rem" }}

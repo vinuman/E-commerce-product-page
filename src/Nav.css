@@ -80,6 +80,7 @@ nav > .right > img {
   text-align: center;
   font-weight: bolder;
   color: #fff;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

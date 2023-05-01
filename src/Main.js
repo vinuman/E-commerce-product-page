@@ -19,6 +19,7 @@ const Main = ({
   setCount,
   handleIncrement,
   handleDecrement,
+  handleAddToCart,
 }) => {
   return (
     <main>
@@ -87,6 +88,7 @@ const Main = ({
           setCount={setCount}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
+          handleAddToCart={handleAddToCart}
         />
       </div>
     </main>

@@ -91,13 +91,10 @@ function App() {
     setCount(count - 1);
   };
 
-  useEffect(() => {
-    if (count == 0) {
-      document.querySelector(".items-count").classList.add("hide");
-    } else {
-      document.querySelector(".items-count").classList.remove("hide");
-    }
-  }, [count]);
+  const handleAddToCart = () => {
+    document.querySelector(".items-count").classList.add("show");
+    document.querySelector(".items-count").textContent = count;
+  };
 
   //ADDCART JAVASCRIPT ENDS
 
@@ -122,6 +119,7 @@ function App() {
         setCount={setCount}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
+        handleAddToCart={handleAddToCart}
       />
     </div>
   );
