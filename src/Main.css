@@ -71,6 +71,12 @@ main > .right {
   border: 3px solid #ff7e1b;
 }
 
+.add-cart {
+  display: flex;
+  justify-content: flex-start;
+  width: 120%;
+}
+
 .counter {
   width: 15rem;
   height: 5.6rem;
@@ -94,4 +100,24 @@ main > .right {
   font-weight: bolder;
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.add-button {
+  width: 27rem;
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: none;
+  background-color: #ff7e1b;
+  color: #fff;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background-color: #ffab6a;
 }
