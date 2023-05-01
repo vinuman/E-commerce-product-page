@@ -67,6 +67,31 @@ main > .right {
 }
 
 .selected {
-  opacity: 0.5;
+  opacity: 0.8;
   border: 3px solid #ff7e1b;
+}
+
+.counter {
+  width: 15rem;
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f8fd;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.counter > button {
+  border: none;
+  background-color: #f6f8fd;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-span {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

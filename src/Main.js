@@ -1,4 +1,5 @@
 import "./Main.css";
+import Addcart from "./Addcart";
 import { useState, useEffect, useRef } from "react";
 import mainImage from "./image-product-1.jpg";
 import tn1 from "./image-product-1-thumbnail.jpg";
@@ -107,6 +108,7 @@ const Main = () => {
 
           <p className="price-actual">&#36; 250.00</p>
         </div>
+        <Addcart />
       </div>
     </main>
   );
