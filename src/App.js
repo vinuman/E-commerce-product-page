@@ -6,6 +6,7 @@ function App() {
   const [hamburger, Sethamburger] = useState(false);
   const [bgColor, setBgColor] = useState("white");
   const [borderColor, setBorderColor] = useState(null);
+  const listItems = document.querySelectorAll("nav ul li");
 
   const handleHamButtonClick = () => {
     Sethamburger(!hamburger);
@@ -21,9 +22,14 @@ function App() {
     setBorderColor(index);
   };
 
+  const handleMenuMouseLeave = () => {
+    listItems.forEach((item) => {
+      setBorderColor("");
+    });
+  };
+
   useEffect(() => {
     document.body.className = `bg-${bgColor}`;
-    const listItems = document.querySelectorAll("nav ul li");
     listItems.forEach((item, index) => {
       if (index === borderColor) {
         item.classList.add("orange");
@@ -42,6 +48,7 @@ function App() {
         borderColor={borderColor}
         setBorderColor={setBorderColor}
         handleMenuHover={handleMenuHover}
+        handleMenuMouseLeave={handleMenuMouseLeave}
       />
       <Main />
     </div>

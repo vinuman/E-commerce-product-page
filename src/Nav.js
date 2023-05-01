@@ -9,6 +9,7 @@ const Nav = ({
   hamburger,
   Sethamburger,
   handleMenuHover,
+  handleMenuMouseLeave,
 }) => {
   return (
     <nav>
@@ -20,19 +21,35 @@ const Nav = ({
       <div className="left">
         <img src={logo}></img>
         <ul>
-          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+          <li
+            onMouseEnter={handleMenuHover}
+            onMouseLeave={handleMenuMouseLeave}
+          >
             Collections
           </li>
-          <li onMouseOver={handleMenuHover} onMouseLeave={handleMenuHover}>
+          <li
+            onMouseEnter={handleMenuHover}
+            onMouseLeave={handleMenuMouseLeave}
+          >
             Men
           </li>
-          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+          <li
+            onMouseEnter={handleMenuHover}
+            onMouseLeave={handleMenuMouseLeave}
+          >
             Women
           </li>
-          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+
+          <li
+            onMouseEnter={handleMenuHover}
+            onMouseLeave={handleMenuMouseLeave}
+          >
             About
           </li>
-          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+          <li
+            onMouseEnter={handleMenuHover}
+            onMouseLeave={handleMenuMouseLeave}
+          >
             Contact
           </li>
         </ul>
