@@ -22,9 +22,11 @@ function App() {
     setBorderColor(index);
   };
 
-  const handleMenuMouseLeave = () => {
+  const handleMenuMouseLeave = (e) => {
     listItems.forEach((item) => {
-      setBorderColor("");
+      const index = [...e.target.parentNode.children].indexOf(e.target);
+      setBorderColor(!index);
+      console.log(item);
     });
   };
 

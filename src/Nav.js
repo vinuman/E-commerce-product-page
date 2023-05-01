@@ -21,10 +21,7 @@ const Nav = ({
       <div className="left">
         <img src={logo}></img>
         <ul>
-          <li
-            onMouseEnter={handleMenuHover}
-            onMouseLeave={handleMenuMouseLeave}
-          >
+          <li onMouseOver={handleMenuHover} onMouseLeave={handleMenuMouseLeave}>
             Collections
           </li>
           <li

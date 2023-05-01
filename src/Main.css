@@ -1,4 +1,72 @@
 main {
-  padding: 4rem 12rem;
+  padding: 4rem 4rem 2rem 20rem;
   display: flex;
+}
+
+.main-image > img {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.thumbnails {
+  padding-top: 1rem;
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+}
+
+.thumbnails > img {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+main > .right {
+  width: 40%;
+  padding-top: 4rem;
+  padding-left: 8rem;
+}
+
+.right > h1 {
+  font-size: 1.3rem;
+  color: #ff7e1b;
+  padding-bottom: 1.5rem;
+}
+.right > h2 {
+  font-size: 4.4rem;
+  color: #1d2026;
+  padding-bottom: 1rem;
+}
+.right > p {
+  font-size: 1.6rem;
+  color: #69707d;
+  padding-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+.price-discount {
+  font-size: 2.8rem;
+  color: #1d2026;
+  font-weight: bolder;
+}
+
+.discount {
+  font-size: 1.6rem;
+  color: #ff7e1b;
+  font-weight: bolder;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  padding: 0.7rem 0 0 0.7rem;
+  background-color: #ffeee2;
+}
+
+.price-actual {
+  font-size: 1.6rem;
+  color: #b6bcc8;
+  font-weight: bolder;
+  text-decoration: line-through;
+}
+
+.selected {
+  opacity: 0.5;
+  border: 3px solid #ff7e1b;
 }
