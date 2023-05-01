@@ -2,16 +2,17 @@ import "./Main.css";
 import minus from "./icon-minus.svg";
 import plus from "./icon-plus.svg";
 import cart from "./icon-cart.svg";
+import { useState } from "react";
 
-const Addcart = () => {
+const Addcart = ({ count, setCount, handleIncrement, handleDecrement }) => {
   return (
     <div className="add-cart">
       <div className="counter">
-        <button>
+        <button onClick={handleDecrement}>
           <img src={minus}></img>
         </button>
-        <span className="button-span">0</span>
-        <button>
+        <span className="button-span">{count}</span>
+        <button onClick={handleIncrement}>
           <img src={plus}></img>
         </button>
       </div>

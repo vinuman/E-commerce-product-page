@@ -10,42 +10,16 @@ import image2 from "./image-product-2.jpg";
 import image3 from "./image-product-3.jpg";
 import image4 from "./image-product-4.jpg";
 
-const Main = () => {
-  const [myImage, setMyImage] = useState("mainImage");
-
-  const imageItems = document.querySelectorAll(".thumbnails img");
-
-  const handleImageChange = (param) => {
-    setMyImage(param);
-    console.log(imageItems[0]);
-  };
-
-  useEffect(() => {
-    imageItems.forEach((image) => {
-      if (myImage == "mainImage") {
-        imageItems[0].classList.add("selected");
-        imageItems[1].classList.remove("selected");
-        imageItems[2].classList.remove("selected");
-        imageItems[3].classList.remove("selected");
-      } else if (myImage == "tn2") {
-        imageItems[0].classList.remove("selected");
-        imageItems[1].classList.add("selected");
-        imageItems[2].classList.remove("selected");
-        imageItems[3].classList.remove("selected");
-      } else if (myImage == "tn3") {
-        imageItems[0].classList.remove("selected");
-        imageItems[1].classList.remove("selected");
-        imageItems[2].classList.add("selected");
-        imageItems[3].classList.remove("selected");
-      } else if (myImage == "tn4") {
-        imageItems[0].classList.remove("selected");
-        imageItems[1].classList.remove("selected");
-        imageItems[2].classList.remove("selected");
-        imageItems[3].classList.add("selected");
-      }
-    });
-  }, [myImage]);
-
+const Main = ({
+  myImage,
+  setMyImage,
+  imageItems,
+  handleImageChange,
+  count,
+  setCount,
+  handleIncrement,
+  handleDecrement,
+}) => {
   return (
     <main>
       <div className="left">
@@ -108,7 +82,12 @@ const Main = () => {
 
           <p className="price-actual">&#36; 250.00</p>
         </div>
-        <Addcart />
+        <Addcart
+          count={count}
+          setCount={setCount}
+          handleIncrement={handleIncrement}
+          handleDecrement={handleDecrement}
+        />
       </div>
     </main>
   );
