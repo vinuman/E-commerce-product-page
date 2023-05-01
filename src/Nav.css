@@ -29,11 +29,13 @@ nav > .left > ul > li {
   font-size: 1.5rem;
   color: var(--dark-grayish-blue);
   cursor: pointer;
+  padding-bottom: 1.5rem;
 }
 
-nav > .left > ul > li:hover {
+/* nav > .left > ul > li:hover {
   color: var(--black);
-}
+  border-bottom: 3px solid #ff7e1b;
+} */
 
 nav > .right {
   width: 10rem;

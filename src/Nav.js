@@ -4,7 +4,12 @@ import cart from "./icon-cart.svg";
 import profilePic from "./image-avatar.png";
 import Hamburger from "./Hamburger";
 
-const Nav = ({ handleHamButtonClick, hamburger, Sethamburger }) => {
+const Nav = ({
+  handleHamButtonClick,
+  hamburger,
+  Sethamburger,
+  handleMenuHover,
+}) => {
   return (
     <nav>
       <Hamburger
@@ -15,11 +20,21 @@ const Nav = ({ handleHamButtonClick, hamburger, Sethamburger }) => {
       <div className="left">
         <img src={logo}></img>
         <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+            Collections
+          </li>
+          <li onMouseOver={handleMenuHover} onMouseLeave={handleMenuHover}>
+            Men
+          </li>
+          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+            Women
+          </li>
+          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+            About
+          </li>
+          <li onMouseEnter={handleMenuHover} onMouseLeave={handleMenuHover}>
+            Contact
+          </li>
         </ul>
       </div>
       <div className="right">
