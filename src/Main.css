@@ -126,3 +126,55 @@ main > .right {
 .show {
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  main > .left {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  main > .right {
+    width: 100%;
+    margin-top: 120%;
+    padding: 1rem 2rem;
+  }
+
+  main > .right > h1 {
+    font-size: 1.2rem;
+  }
+  main > .right > h2 {
+    font-size: 2.8rem;
+    width: 70%;
+  }
+  main > .right > p {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .pricing {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-cart {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .counter {
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .add-button {
+    width: 80%;
+    margin-left: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}

@@ -194,6 +194,7 @@ nav > .right > img {
     background-color: #fff;
     padding: 3rem;
     border-radius: 1rem;
+    z-index: 99999;
   }
   .modal-nav > ul {
     list-style-type: none;
@@ -208,5 +209,20 @@ nav > .right > img {
 
   nav > .right {
     width: 30rem;
+  }
+  .cart-icon {
+    margin-right: 1rem;
+  }
+  .cart {
+    width: 90%;
+    height: 25.6rem;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+  }
+
+  .checkout {
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 }
