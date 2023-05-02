@@ -61,6 +61,13 @@ function App() {
     document.querySelector("body").classList.add("bg-black");
   };
 
+  const handleModalCloseButton = () => {
+    document.querySelector(".modal").classList.remove("show");
+    document.querySelector("main").classList.remove("hide");
+    document.querySelector("nav").classList.remove("hide");
+    document.querySelector("body").classList.remove("bg-black");
+  };
+
   //NAVBAR JAVASCRIPT ENDS
 
   //MAIN JAVASCRIPT
@@ -128,6 +135,33 @@ function App() {
     setModalImage(param);
   };
 
+  const images = ["mainImage", "tn2", "tn3", "tn4"];
+
+  const handleNextButton = () => {
+    const currentIndex = images.indexOf(modalImage);
+    let nextIndex = 0;
+    if (currentIndex == images.length - 1) {
+      nextIndex = 0;
+    } else {
+      nextIndex = currentIndex + 1;
+    }
+    setModalImage(images[nextIndex]);
+    console.log("next");
+  };
+  const handlePreviousButton = () => {
+    const currentIndex = images.indexOf(modalImage);
+    let prevIndex = 0;
+    if (currentIndex == 0) {
+      prevIndex = images.length - 1;
+    } else {
+      prevIndex = currentIndex - 1;
+    }
+    setModalImage(images[prevIndex]);
+    console.log("previous");
+  };
+
+  //MODAL JAVASCRIPT ENDS
+
   return (
     <div className="App">
       <Nav
@@ -162,6 +196,9 @@ function App() {
         modalImage={modalImage}
         setModalImage={setModalImage}
         handleMainImageClick={handleMainImageClick}
+        handleModalCloseButton={handleModalCloseButton}
+        handleNextButton={handleNextButton}
+        handlePreviousButton={handlePreviousButton}
       />
     </div>
   );

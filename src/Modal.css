@@ -7,6 +7,12 @@
 
 .close {
   margin-left: 98%;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ffffff;
 }
 
 .main-image-container {

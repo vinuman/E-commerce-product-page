@@ -16,14 +16,17 @@ const Modal = ({
   modalImage,
   setmodalImage,
   handleMainImageClick,
+  handleModalCloseButton,
+  handleNextButton,
+  handlePreviousButton,
 }) => {
   return (
     <div className="modal">
-      <img className="close" src={close}></img>
+      <img onClick={handleModalCloseButton} className="close" src={close}></img>
       <div className="main-image-container">
         <div className="modal-buttons">
-          <img src={previous}></img>
-          <img src={next}></img>
+          <img onClick={handlePreviousButton} src={previous}></img>
+          <img onClick={handleNextButton} src={next}></img>
         </div>
         {modalImage == "mainImage" ? (
           <img style={{ width: "100%", height: "auto" }} src={mainImage}></img>
@@ -42,7 +45,6 @@ const Modal = ({
           onClick={() => handleImageChange2("mainImage")}
           style={{ width: "8rem", height: "8rem" }}
           src={tn1}
-          className="selected"
         ></img>
         <img
           onClick={() => handleImageChange2("tn2")}
