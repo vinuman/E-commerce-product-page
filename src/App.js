@@ -8,6 +8,7 @@ function App() {
   const [bgColor, setBgColor] = useState("white");
   const [borderColor, setBorderColor] = useState(null);
   const listItems = document.querySelectorAll("nav ul li");
+  const [addItem, setAddItem] = useState(false);
 
   const handleHamButtonClick = () => {
     Sethamburger(!hamburger);
@@ -41,6 +42,11 @@ function App() {
       }
     });
   }, [bgColor, borderColor]);
+
+  const handleCartButton = () => {
+    document.querySelector(".cart").classList.toggle("show");
+  };
+
   //NAVBAR JAVASCRIPT ENDS
 
   //MAIN JAVASCRIPT
@@ -92,8 +98,10 @@ function App() {
   };
 
   const handleAddToCart = () => {
+    if (count == 0) return;
     document.querySelector(".items-count").classList.add("show");
     document.querySelector(".items-count").textContent = count;
+    setAddItem(true);
   };
 
   //ADDCART JAVASCRIPT ENDS
@@ -109,6 +117,10 @@ function App() {
         handleMenuHover={handleMenuHover}
         handleMenuMouseLeave={handleMenuMouseLeave}
         count={count}
+        handleCartButton={handleCartButton}
+        addItem={addItem}
+        setAddItem={setAddItem}
+        handleAddToCart={handleAddToCart}
       />
       <Main
         myImage={myImage}

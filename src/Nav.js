@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import cart from "./icon-cart.svg";
 import profilePic from "./image-avatar.png";
 import Hamburger from "./Hamburger";
+import Cart from "./Cart";
 
 const Nav = ({
   handleHamButtonClick,
@@ -11,6 +12,10 @@ const Nav = ({
   handleMenuHover,
   handleMenuMouseLeave,
   count,
+  handleCartButton,
+  addItem,
+  setAddItem,
+  handleAddToCart,
 }) => {
   return (
     <nav>
@@ -53,7 +58,12 @@ const Nav = ({
         </ul>
       </div>
       <div className="right">
-        <img style={{ width: "2rem", height: "2rem" }} src={cart}></img>
+        <img
+          onClick={handleCartButton}
+          className="cart-icon"
+          style={{ width: "2rem", height: "2rem" }}
+          src={cart}
+        ></img>
         <span className="items-count"></span>
         <img
           className="profile-pic"
@@ -61,6 +71,12 @@ const Nav = ({
           src={profilePic}
         ></img>
       </div>
+      <Cart
+        addItem={addItem}
+        setAddItem={setAddItem}
+        handleAddToCart={handleAddToCart}
+        count={count}
+      />
     </nav>
   );
 };

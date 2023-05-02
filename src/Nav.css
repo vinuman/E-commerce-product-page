@@ -50,7 +50,7 @@ nav > .right > img {
 }
 
 .profile-pic:hover {
-  border: 2px solid red;
+  border: 2px solid #ff7e1b;
   border-radius: 50%;
 }
 
@@ -81,6 +81,28 @@ nav > .right > img {
   font-weight: bolder;
   color: #fff;
   display: none;
+}
+
+.cart {
+  width: 36rem;
+  height: 25.6rem;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  border-radius: 1rem;
+  padding: 2rem;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: none;
+}
+
+.cart > p {
+  font-size: 1.6rem;
+  color: #1d2026;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+  padding-bottom: 2rem;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 768px) {
