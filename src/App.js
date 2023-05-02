@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import Main from "./Main";
+import Modal from "./Modal";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -45,6 +46,12 @@ function App() {
 
   const handleCartButton = () => {
     document.querySelector(".cart").classList.toggle("show");
+  };
+
+  const handleTrashCan = () => {
+    setAddItem(false);
+    document.querySelector(".items-count").classList.remove("show");
+    document.querySelector(".items-count").textContent = "";
   };
 
   //NAVBAR JAVASCRIPT ENDS
@@ -121,6 +128,7 @@ function App() {
         addItem={addItem}
         setAddItem={setAddItem}
         handleAddToCart={handleAddToCart}
+        handleTrashCan={handleTrashCan}
       />
       <Main
         myImage={myImage}
@@ -132,6 +140,11 @@ function App() {
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         handleAddToCart={handleAddToCart}
+      />
+      <Modal
+        handleImageChange={handleImageChange}
+        myImage={myImage}
+        setMyImage={setMyImage}
       />
     </div>
   );

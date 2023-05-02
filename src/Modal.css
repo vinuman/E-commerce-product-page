@@ -1,0 +1,16 @@
+.modal {
+  border: 1px solid red;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+.close {
+  margin-left: 98%;
+}
+
+.main-image-container {
+  width: 40rem;
+  height: 40rem;
+  margin-top: 2rem;
+}

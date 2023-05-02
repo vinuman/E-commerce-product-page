@@ -16,6 +16,7 @@ const Nav = ({
   addItem,
   setAddItem,
   handleAddToCart,
+  handleTrashCan,
 }) => {
   return (
     <nav>
@@ -76,6 +77,7 @@ const Nav = ({
         setAddItem={setAddItem}
         handleAddToCart={handleAddToCart}
         count={count}
+        handleTrashCan={handleTrashCan}
       />
     </nav>
   );

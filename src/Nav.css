@@ -88,7 +88,7 @@ nav > .right > img {
   height: 25.6rem;
   position: absolute;
   right: 10%;
-  top: 10%;
+  top: 15%;
   border-radius: 1rem;
   padding: 2rem;
   z-index: 1000;
@@ -103,6 +103,69 @@ nav > .right > img {
   border-bottom: 1px solid rgba(151, 151, 151, 0.3);
   padding-bottom: 2rem;
   font-weight: bolder;
+}
+
+.cart-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.item-details {
+  display: flex;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.item-description > P {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  color: #69707d;
+  font-weight: lighter;
+  padding-bottom: 0.5rem;
+}
+
+.confirmation {
+  color: #1d2026;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.trash-can {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+.trash-can:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.checkout {
+  width: 30rem;
+  height: 5.6rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: #ff7e1b;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.checkout:hover {
+  background-color: #ffab6a;
+}
+
+.empty {
+  font-size: 1.6rem;
+  width: 30rem;
+  height: 18rem;
+  text-align: center;
+  padding-top: 25%;
 }
 
 @media screen and (max-width: 768px) {
