@@ -1,8 +1,8 @@
 .modal {
-  border: 1px solid red;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 30%;
+  display: none;
 }
 
 .close {
@@ -10,7 +10,40 @@
 }
 
 .main-image-container {
-  width: 40rem;
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
   margin-top: 2rem;
+}
+
+.main-image-container > img {
+  border-radius: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+  position: absolute;
+  top: 40%;
+  left: -5%;
+}
+
+.modal-buttons > img {
+  border-radius: 55%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.thumbnails {
+  width: 45rem;
+  margin: 0 auto;
+}
+
+.show {
+  display: block;
+}
+
+.bg-black {
+  background-color: black;
 }

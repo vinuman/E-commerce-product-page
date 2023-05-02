@@ -20,11 +20,12 @@ const Main = ({
   handleIncrement,
   handleDecrement,
   handleAddToCart,
+  handleMainImageClick,
 }) => {
   return (
     <main>
       <div className="left">
-        <div className="main-image">
+        <div onClick={handleMainImageClick} className="main-image">
           {myImage == "mainImage" ? (
             <img
               src={mainImage}

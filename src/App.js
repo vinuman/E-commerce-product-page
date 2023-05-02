@@ -54,6 +54,13 @@ function App() {
     document.querySelector(".items-count").textContent = "";
   };
 
+  const handleMainImageClick = () => {
+    document.querySelector(".modal").classList.add("show");
+    document.querySelector("main").classList.add("hide");
+    document.querySelector("nav").classList.add("hide");
+    document.querySelector("body").classList.add("bg-black");
+  };
+
   //NAVBAR JAVASCRIPT ENDS
 
   //MAIN JAVASCRIPT
@@ -113,6 +120,14 @@ function App() {
 
   //ADDCART JAVASCRIPT ENDS
 
+  //MODAL JAVASCRIPT
+
+  const [modalImage, setModalImage] = useState("mainImage");
+
+  const handleImageChange2 = (param) => {
+    setModalImage(param);
+  };
+
   return (
     <div className="App">
       <Nav
@@ -140,11 +155,13 @@ function App() {
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         handleAddToCart={handleAddToCart}
+        handleMainImageClick={handleMainImageClick}
       />
       <Modal
-        handleImageChange={handleImageChange}
-        myImage={myImage}
-        setMyImage={setMyImage}
+        handleImageChange2={handleImageChange2}
+        modalImage={modalImage}
+        setModalImage={setModalImage}
+        handleMainImageClick={handleMainImageClick}
       />
     </div>
   );
