@@ -36,7 +36,7 @@
 
 .modal-buttons > img {
   border-radius: 55%;
-  padding: 1.5rem;
+
   background-color: #ffffff;
   cursor: pointer;
 }
@@ -75,10 +75,10 @@
   .modal-buttons {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 150%;
-    left: 0;
+    left: 5%;
   }
 
   .modal-buttons > img {
